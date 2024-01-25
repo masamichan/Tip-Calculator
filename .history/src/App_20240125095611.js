@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 
 export default function App() {
@@ -10,13 +9,10 @@ export default function App() {
 }
 
 function TipCalculator() {
-  const [bill, setBill] = useState(0);
-
   return (
     <div>
       <BillInput />
-      <SelectPercentage>How did you like the service</SelectPercentage>
-      <SelectPercentage>How did your friend like the service</SelectPercentage>
+      <SelectPercentage />
       <Output />
       <Reset />
     </div>
@@ -32,10 +28,9 @@ function BillInput() {
   );
 }
 
-function SelectPercentage({ children }) {
+function SelectPercentage() {
   return (
     <div>
-      <lable>{children}</lable>
       <select>
         <option value="0">Dissatisfied(0%)</option>
         <option value="5">It was okay(5%)</option>
@@ -46,10 +41,6 @@ function SelectPercentage({ children }) {
   );
 }
 
-function Output() {
-  return <h3>You pay X ($A + $B tip)</h3>;
-}
+function Output() {}
 
-function Reset() {
-  return <button>Reset</button>;
-}
+function Reset() {}

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 
 export default function App() {
@@ -10,8 +9,6 @@ export default function App() {
 }
 
 function TipCalculator() {
-  const [bill, setBill] = useState(0);
-
   return (
     <div>
       <BillInput />
